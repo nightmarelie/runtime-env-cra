@@ -4,5 +4,26 @@
   "main": "index.js",
   "repository": "git@github.com:nightmarelie/runtime-env-cra.git",
   "author": "Oleksii Kryvtsov <nightmarelie@gmail.com>",
-  "license": "MIT"
+  "scripts": {
+    "test": "jest --coverage --silent --config jest.config.js",
+    "test:watch": "jest --watch",
+    "lint": "eslint \"{lib,test}/**/*.js\"",
+    "lint:fix": "eslint \"{lib,test}/**/*.js\" --fix",
+    "packages:check": "npx npm-check-updates",
+    "packages:upgrade": "npx npm-check-updates -u",
+    "update-runtime-env-cra": "npx np"
+  },
+  "dependencies": {
+    "yargs": "^17.1.1"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "jest": "^27.0.6",
+    "jest-junit": "^12.2.0",
+    "prettier": "^2.3.2"
+  }
 }
